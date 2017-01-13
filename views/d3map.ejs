@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>County Mapping</title>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/style.css">
+
+        <script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+        <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+        <!-- <script src="/mapQueue.js" type="text/javascript"></script> -->
+        <style type="text/css">
+            p {
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+            }
+            h2 {
+                font-weight: lighter;
+            }
+            #caption {
+                font-family: averta;
+                font-weight: lighter;
+                color: #fff;
+                text-align: center;
+                width: 310px;
+                height: 310px;
+                padding: 10px;
+                /*border-radius: 3px;*/
+                position: absolute;
+                bottom: 0px;
+                right: -120px;
+                background-color: rgba(0,0,0,.4);
+            }
+            .activeState{
+              fill:red;
+            }
+            .countyDataDisplay td {
+                width: 50%;
+                padding: 10px;
+            }
+            #donutChart {
+                border-left: 1px solid #fff;
+            }
+            .dataContent {
+                text-align: center;
+                width: 100%;
+            }
+            .totalListedCell {
+                font-size: 18px;
+                padding: 10px;
+            }
+            .countyDataDisplay span,
+            .greenData {
+                color: #5DD82A;
+            }
+            .countyDataDisplay span {
+                font-size: 34px;
+            }
+            .counties path {
+                stroke: #fff;
+                stroke-width: 0.5px;
+                stroke-opacity: 0.5;
+                fill: #81abce;
+                display: none;
+            }
+
+            .states {
+                stroke: #fff;
+                stroke-width: 1px;
+                fill: #0098ee;
+            }
+            .counties path:hover {
+                fill: Steelblue;
+            }
+            .states path:hover {
+                fill: #0098cc;
+            }
+            /* svg styles */
+            #map{
+              /*border:1px solid #eee;*/
+            }
+            svg {
+                font-family: sans-serif;
+                font-size: 10px;
+            }
+
+            .axis line,
+            .axis path {
+                fill: none;
+                stroke: #444;
+                stroke-width: 0.5;
+            }
+
+            svg circle {
+                stroke: #444;
+                stroke-width: 0.5;
+                fill: white;
+            }
+            .background {
+                fill: none;
+                pointer-events: all;
+            }
+
+            .feature {
+                fill: #ccc;
+                cursor: pointer;
+            }
+
+            .feature.active {
+                fill: orange;
+            }
+
+            .mesh {
+                fill: none;
+                stroke: #fff;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            .pad{
+              padding-top:100px;
+              padding-bottom:100px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header >
+            <div class="top-bar">
+                <div class="container">
+                        <h1>LOGO</h1>
+                </div>
+            </div>
+
+        </header>
+        <div class="container">
+
+            <div class="content row">
+                <article class="post col-md-12">
+
+                    <div id="caption">
+                        <h2>Choose a state to see Counties:</h2>
+                    </div>
+
+                    <div id="map">
+                        <h4 class="loading">Loading...</h4>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 pad">
+              <h1>  Explanation Section of Map:<span style="font-size:12px;">  Data is predictive</span></h1>
+                <h4>Data January 2016 through August 2016</h4>
+
+              <p>  <strong>BTS</strong> = Brought to sale
+              </p><p>
+                <strong>Total List</strong> = number of properties allocated to the county for auction year to date
+                Percentage tells you chance of a property listed in that county making it to the auction block
+              </p><p>
+                <strong>Will add in:</strong> “View County Properties” Will link you to current properties listed in that county
+                Only Foreclosure properties, and Auction.com specific data
+                Add disclaimers
+              </p><p>
+                <strong>Will add in:</strong> Email sign up field (“find out when this map is updated”)
+            </p>
+              </div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="/js/stateCounties.js"></script>
+
+    </body>
+</html>
