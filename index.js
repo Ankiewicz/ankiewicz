@@ -11,13 +11,16 @@ app.use(morgan('dev'));
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 
-
+app.get('/', function(req, res) {
+  res.render('./index')
+})
 app.get('/d3map', function(req, res) {
   res.render('./d3map')
 })
 app.get('/scoreboard', function(req, res) {
   res.render('./scoreboard')
 })
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
