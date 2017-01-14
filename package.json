@@ -9,7 +9,8 @@
   "dependencies": {
     "ejs": "^2.5.5",
     "ejs-mate": "^2.3.0",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "waypoints": "^4.0.1"
   },
   "engines": {
     "node": "4.1.1",
