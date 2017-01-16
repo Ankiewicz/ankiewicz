@@ -15,6 +15,7 @@ app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
+  res.render('./index')
 })
 app.get('/d3map', function(req, res) {
   res.render('./d3map')
