@@ -27,7 +27,7 @@ app.get('/scoreboard', function(req, res) {
 // app.listen(app.get('port'), function() {
 //   console.log("Node app is running at localhost:" + app.get('port'))
 // })
-app.listen(process.env.PORT || 8080, function () {
+var server = app.listen(process.env.PORT || 5000, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
   });
