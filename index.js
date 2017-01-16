@@ -3,6 +3,7 @@ var app = express()
 var morgan = require('morgan')
 var ejs = require('ejs')
 var engine = require('ejs-mate')
+var d3 = require('d3')
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
