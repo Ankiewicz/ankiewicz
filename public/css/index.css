@@ -726,3 +726,12 @@ input[class="checked"] + label {
   background-color: #d1792a;
 
 }
+
+
+/*************
+Goals section
+***************/
+
+.goals{
+  text-align: center;
+}
