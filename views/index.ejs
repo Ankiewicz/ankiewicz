@@ -76,6 +76,14 @@
         </tr>
       </tbody>
     </table>
+    <div class="diffMe">
+      <div class="businessMe">
+            Business
+      </div>
+      <div class="geekMe checked">
+            Geek
+      </div>
+    </div>
   </div>
 
 
@@ -101,10 +109,16 @@
             </tr>
           </tbody>
         </table>
+        <div class="diffMe">
+          <div class="businessMe">
+                Business
+          </div>
+          <div class="geekMe checked">
+                Geek
+          </div>
+        </div>
       </div>
-
     </div>
-
   </div>
   <!-- close of hero image area -->
 
@@ -348,6 +362,22 @@
         <script type="text/javascript" src="/js/portfolio.js"></script>
         <script type="text/javascript" src="/js/infographics.js"></script>
 
+        <script>
+            $('.businessMe').on('click', function(){
+              $('#heroBackground').css('background-image', 'url("../img/business_sidev1.jpg")');
+              $('#heroBackground').css('background-repeat', 'no-repeat');
+              $('#heroBackground').css('background-position', 'center');
+              $('.diffMe div').removeClass('checked');
+              $('.businessMe').addClass('checked')
+            });
+            $('.geekMe').on('click', function(){
+              $('#heroBackground').css('background-image', 'url("../img/geek_sidev1.jpg")');
+              $('#heroBackground').css('background-repeat', 'no-repeat');
+              $('#heroBackground').css('background-position', 'center');
+              $('.diffMe div').removeClass('checked');
+              $('.geekMe').addClass('checked')
+            });
+        </script>
 </body>
 
 </html>

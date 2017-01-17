@@ -50,7 +50,10 @@ h3{
 
 #heroBackground {
     /*min-height: 600px;*/
-    background: url("../img/geek_sidev1.jpg") no-repeat top  ;
+    background: url("../img/geek_sidev1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw auto;
     padding-bottom: 55%;
     -webkit-filter: drop-shadow(2px 4px 0 #eee);
     filter: drop-shadow(2px 4px 0 #eee);
@@ -69,7 +72,45 @@ h3{
 .greetings {
     width:300px;
     margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 2%;
+}
+
+.diffMe{
+  display: inline-block;
+  width:200px;
+}
+.diffMe div{
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-family: 'Open Sans',helvetica, sans-serif;
+  color: #888;
+  cursor: pointer;
+   position: relative;
+}
+.diffMe div:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.diffMe div:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #F89827;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.diffMe div.checked{
+  text-align: center;
+  font-family: 'Open Sans',helvetica, sans-serif;
+  color: #F89827;
 }
 
 
