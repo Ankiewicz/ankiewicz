@@ -184,3 +184,51 @@
                     d3.selectAll('pre').attr('class', 'prettyprint');
 
                 }})(d3);
+
+
+
+                function getSlider(argument) {
+
+
+var url = "https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js";
+$.getScript(url, function() {
+
+
+    $('.slidingSection').slick({
+        dots: true,
+        speed: 600,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        respondTo: 'min',
+        mobileFirst: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+
+        ]
+    });
+
+});
+};
+getSlider();
