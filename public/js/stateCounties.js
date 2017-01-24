@@ -54,14 +54,11 @@
                             countyDetails += '</span> </td>'
                             countyDetails += '<td align="center" valign="middle" id="donutChart"></td> '
                             countyDetails += '  </tr>'
-                            countyDetails += ' <tr><td align="center" valign="top">TOTAL LISTED</td> '
-                            countyDetails += ' <td align="center" valign="top"><span class="greenData">' + d.Brought_To_Sale + '</span> BROUGHT<br/> TO SALE</td> </tr>'
+                            countyDetails += ' <tr><td align="center" valign="top">TOTAL COWS</td> '
+                            countyDetails += ' <td align="center" valign="top"><span class="greenData">' + d.Brought_To_Sale + '</span> BOUGHT<br/> TO SALE</td> </tr>'
                             countyDetails += '</table>'
 
-                            // countyDetails += '<p> Cancelled: ' + d.Cancelled + '</p>' countyDetails += '<p> Cancelled_: ' + d.Cancelled_Percent + '</p>' countyDetails += '<p> Postponed: ' + d.Postponed + '</p>' countyDetails += '<p> Postponed_: ' + d.Postponed_Percent +
-                            // '</p>' countyDetails += '<p> TotalFallout: ' + d.Total_Fallout + '</p>' countyDetails += '<p> Total_Fallout_: ' + d.Total_Fallout_Percent + '</p>' countyDetails += '<p> Pending_OutbidNC: ' + d.Brought_To_Sale_Percent + '</p>' countyDetails += '<p>
-                            // Pending_Sales_Results: ' + d.Brought_To_Sale + '</p>' countyDetails += '<p> BTS_from_total_list: ' + d.Sold + '</p>' countyDetails += '<p> BTS: ' + d.Sold_Percent + '</p>' countyDetails += '<a
-                            // href="https://www.auction.com/residential/foreclosures_at/tx/dallas-county/bm_st/48_rpp/1_cp/"></a>'
+
                             caption.html(countyDetails);
 
                             // Showing the data as a donut display
@@ -77,11 +74,11 @@
                                 radius = Math.min(width, height) / 2;
 
                             // var color = d3.scale.category20();
-                            var color = d3.scale.ordinal().range(["#5DD82A", "#555"]);
+                            var color = d3.scale.ordinal().range(["#F89827", "#555"]);
 
                             var pie = d3.layout.pie().sort(null);
 
-                            var arc = d3.svg.arc().innerRadius(radius - 30).outerRadius(radius - 10);
+                            var arc = d3.svg.arc().innerRadius(radius - 30).outerRadius(radius - 20);
 
                             var svg = d3.select("#donutChart").insert("svg").attr("width", width).attr("height", height).append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
@@ -120,10 +117,7 @@
                     counties.transition().duration(750).style("stroke-width", 1.5 / scale + "px").attr("transform", "translate(" + translate + ")scale(" + scale + ")");
 
                     counties.style('display', 'block');
-                    // states.style('fill', 'none');
-
-                    //TODO ADD AJAX FOR STATE DATA CALL HERE
-                    // console.log(d.properties.name) - this is the call to receive the statename
+                    // states.style('fill', '#eee');
 
                 }
                 function reset() {
@@ -184,4 +178,3 @@
                     d3.selectAll('pre').attr('class', 'prettyprint');
 
                 }})(d3);
-      

@@ -5,7 +5,6 @@ var engine = require('ejs-mate')
 var d3 = require('d3')
 
 
-
 router.get('/', function(req, res) {
   res.render('./index')
 })
@@ -20,6 +19,5 @@ router.get('/d3map', function(req, res) {
 router.get('/scoreboard', function(req, res) {
   res.render('./scoreboard')
 })
-
 
 module.exports = router
