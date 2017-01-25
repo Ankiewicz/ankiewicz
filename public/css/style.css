@@ -49,6 +49,9 @@
     #donutChart {
         border-left: 1px solid #ddd;
     }
+    #donutChart svg{
+        border:none;
+    }
     .dataContent {
         text-align: center;
         width: 100%;
@@ -133,5 +136,9 @@
     }
     .fullMap{
       transform: scale(.9);
+      width:100%;
     }
-  
+    .ipadImg{
+      height: 400px;
+      overflow: hidden;
+    }

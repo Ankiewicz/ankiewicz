@@ -3,6 +3,12 @@ var router = require('express').Router()
 var ejs = require('ejs')
 var engine = require('ejs-mate')
 var d3 = require('d3')
+var helper = require('sendgrid').mail;
+const mailer = require('sendgrid-mailer').config("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");
+
+
+
+
 
 
 router.get('/', function(req, res) {
@@ -19,5 +25,23 @@ router.get('/d3map', function(req, res) {
 router.get('/scoreboard', function(req, res) {
   res.render('./scoreboard')
 })
+
+router.post('/sendEmail', function(req, res){
+
+  //Create email data
+  const email = {
+    to: 'ankiewicz84@gmail.com',
+    from: 'Someone <b@example.org>',
+    subject: 'Hello world',
+    text: 'Hello plain world!',
+    html: '<p>Hello HTML world!</p>',
+  };
+
+  //Send away
+  mailer.send(email); //Returns promise
+
+});
+
+
 
 module.exports = router
