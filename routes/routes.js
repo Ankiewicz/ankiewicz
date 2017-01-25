@@ -31,7 +31,7 @@ router.post('/sendEmail', function(req, res){
   //Create email data
   const email = {
     to: 'ankiewicz84@gmail.com',
-    from: 'Someone, <b@example.org>',
+    from: '<b@example.org>',
     subject: 'Hello world',
     text: 'Hello plain world!',
     html: '<p>Hello HTML world!</p>',
