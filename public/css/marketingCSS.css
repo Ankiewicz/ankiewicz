@@ -78,7 +78,7 @@ Base
     display: inline-block;
     position: relative;
     opacity: 1;
-    top: 77px;
+    /*top: 77px;*/
     left: 0;
     font-family: "averta", Arial, Helvetica, sans-serif !important;
     display: -webkit-box;
@@ -108,6 +108,7 @@ Base
     background: #fff;
     margin-bottom: 3px;
     border-radius: 2px;
+    opacity: 1;
   }
 
   .burger:last-child {
@@ -182,7 +183,7 @@ Base
   .sticky {
     position: fixed;
     top: 0;
-    padding: 5px 0;
+    padding: 10px 0;
   }
   /* ==========================================================================
 Links
@@ -523,13 +524,13 @@ Global Styles
     color: #8c9398;
     word-spacing: 1px;
     line-height: 30px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: lighter;
   }
 
   .section-padding {
     padding: 45px 0px;
-    background: #F1F4F5;
+    background: #eee;
   }
   .section_no_low_padding {
     padding: 45px 0px 0px 0px;
@@ -546,6 +547,7 @@ Global Styles
   .inner {
     padding-top: 170px;
   }
+
 
   /* ==========================================================================
 iPhone Section
@@ -726,20 +728,23 @@ Waypoints
 
 
   header {
-    background: #16004C;
+    background: #F89827;
     display: block;
     padding: 10px 0;
+    opacity: .6;
   }
 
   .hero {
-    background:url('http://pages.tenx.com/rs/228-OOL-303/images/lp-app-Hero-Image.jpg') no-repeat center center fixed ;
+    background:url('http://new.jpankiewicz.com/images/marketing-Hero.jpg') no-repeat top center  ;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;
-    padding:65px 0;
+    background-size:  100% auto;
+    /*padding:65px 0;*/
     height:auto;
     position:relative;
+    min-height: 500px;
   }
 
   .hero h1 {
@@ -753,7 +758,7 @@ Waypoints
   .hero p {
     margin: 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
 
   }
@@ -799,7 +804,7 @@ Waypoints
   }
 
   .hero-form-box p {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     color: #fff;
     text-align: center;
@@ -841,7 +846,21 @@ Waypoints
     margin: 0px 0px 8px 0px;
   }
 
+/**********
+active hamburger
+**************/
 
+.activeBurger{
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+.activeBurger:nth-child(2){
+  transform: rotate(-45deg);
+  margin-top: -7px;
+}
+.activeBurger:nth-child(3){
+  opacity: 0;
+}
 /********
 Section styles
 **********/
@@ -857,20 +876,24 @@ Section styles
     font-weight: 100;
     text-transform: uppercase;
     text-align: left;
-    color:#16004C;
+    color:#F89827;
   }
   section p{
-    font-size: 20px;
+    font-size: 16px;
     color: #565151;
     line-height: 34px;
     font-weight: lighter;
   }
+
+  .section3 p{
+    font-size: 14px;
+  }
   .mobilePhoneImage{
-    max-height: 490px;
+    max-height: 590px;
     width: auto;
   }
   .textPaddingSection{
-    padding-top: 50px;
+    padding-top: 30px;
   }
   .auction-logo {
     background: url('https://cdn.mlhdocs.com/adc_cms/images/ADClogo-white-1.svg') no-repeat;
@@ -878,7 +901,31 @@ Section styles
     height: 50px;
     display: block;
   }
+  /***************
+  Section2
+  **************/
 
+  .section2{
+    background-color: #eee;
+      -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 85%, 100% 95%, 100% 12%);
+      padding: 80px 0px 50px 0px;
+  }
+
+  .section2 h3{
+    text-align: center;
+  }
+
+  .section3{
+        margin-top: -50px;
+        padding-bottom: 80px;
+  }
+
+
+  .section4{
+        -webkit-clip-path:polygon(0% 0%, 0% 92%, 100% 100%, 100% 0%, 0% 10%);
+  }
+/***********
+footer*********/
 footer {
   background-color: #fff;
 }
@@ -1221,6 +1268,39 @@ footer .band .third {
     margin-bottom: 0px;
   }
 }
+/******************************/
+/*Media queries*/
+/******************************/
+
+@media (max-width:768px){
+    #mobileDrop1{
+        display: none!important;
+    }
+        #mobileDrop2{
+        display: none!important;
+    }
+
+    #mobileDrop3{
+        display: none!important;
+    }
+
+    .mobileAdd{
+        display:block!important;
+        padding: 5px;
+        vertical-align: middle;
+        align-self: center;
+        /*border:1px solid #eee;*/
+    }
+    .mobileAdd:hover{
+        /*border:1px solid #999;*/
+        color: #999;
+    }
+}
+
+
+
+
+
 
 /* --------------------------------
 
@@ -1342,33 +1422,6 @@ footer .band .third {
   }
 }
 
-/******************************/
-/*Media queries*/
-/******************************/
-@media (max-width:768px) {
-  #mobileDrop1 {
-    display: none!important;
-  }
-
-  #mobileDrop2 {
-    display: none!important;
-  }
-
-  #mobileDrop3 {
-    display: none!important;
-  }
-
-  .mobileAdd {
-    display: none;
-    padding: 5px;
-    vertical-align: middle;
-    align-self: center;
-    border:1px solid #eee;
-  }
-
-  .mobileAdd:hover {
-    border: 1px solid #999;
-  }
   /******************
   single column mobilePhoneImage
   ********************/
