@@ -182,6 +182,18 @@ a:active{
 
 /*========================*/
 
+/********
+HTML advertising
+********/
+
+.ads{
+  padding-top: 50px;
+}
+.ads,
+.ads iframe{
+  text-align: center;
+  margin: 0 auto;
+}
 .titleSection {
     transform: scale(.8);
     transform-origin: 0;

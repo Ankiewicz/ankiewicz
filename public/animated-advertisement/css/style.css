@@ -1,0 +1,517 @@
+
+	/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	Eric Meyer					:: https://meyerweb.com
+	HTML5 Doctor				:: https://html5doctor.com
+	and the HTML5 Boilerplate	:: https://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: httpss://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {max-width: 100%;}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/*****************************************/
+/*CAROUSELS CSS*/
+/***************************************/
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+
+
+
+
+
+/*****************************************/
+/*ADVERTISEMENTS CSS*/
+/***************************************/
+
+
+*{
+	-moz-transition: width .5s, left .5s; 
+	-0-transition: width .5s, left .5s; 
+	-webkit-transition: width .5s, left .5s; 
+    transition: width .5s, left .5s;
+}
+
+
+body{
+	width: 100%;
+}
+h1{Font-family: "Avenir", Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 24px;color: #ffffff;}
+a{text-decoration: none;color:#ffffff; Font-family: "Avenir", Helvetica Neue, Helvetica, Arial, sans-serif;}
+a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:active{text-decoration: none;}
+
+ p{
+	padding: 0;
+	margin:0;
+}
+
+strong{letter-spacing: 1px;}
+/*****************************************/
+/*small banner - before expanding styles*/
+/***************************************/
+
+.smallBanner{
+	position: absolute;
+	background: url('https://cdn.mlhdocs.com/adc_cms/images/smLaTimesBanner.jpg');
+	background-size: 100% 100%;
+	width:728px;
+	height: 90px;
+	background-color: #eee;
+	margin:10px auto;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+}
+
+.smallBLogo{
+	width: 150px;
+	height: 100%;
+	background-color: #338D11;
+}
+.smallBLogo img{
+	position: relative;
+	left:27px;
+	top:23px;
+}
+
+/**************************/
+/*full ad styles*/
+/**************************/
+.expandableAdSection{
+	position: absolute;
+	background: url('https://cdn.mlhdocs.com/adc_cms/images/laTimesadBackground.jpg');
+	background-size: 100% 100%;
+	margin:10px auto;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	width:728px;
+	height: 315px;
+	background-color: #eee;
+	z-index: 999999999999999;
+
+
+}
+
+.greenFooter{
+	position: relative;
+	bottom:159px;
+	width:100%;
+	height:55px;
+	background-color: #338D11;
+}
+.greenFooter img{
+	position: relative;
+	top:5px;
+	left:600px;
+}
+
+/***********************************/
+/*Open Close Button Styles*/
+/***********************************/
+#closeButton{
+	position: absolute;
+	background-color: rgba(0,0,0,.6);
+	padding: 3px;
+	top:5px;
+	right:10px;
+	font-size: 14px;
+}
+#openButton{
+	position: absolute;
+	background-color: #0088CC;
+	padding: 7px;
+	top:30px;
+	right:20px;
+	font-size: 14px;
+	opacity: .9;
+}
+
+/***********************************/
+/*header and call to actions styles*/
+/***********************************/
+
+.headerAndCTA{
+	position: relative;
+	top:38px;
+	left:43px;
+	width: 270px;
+	height: 211px;
+/*	background-color: #eee;*/
+}
+
+.headerAndCTA img{
+	margin-bottom: 15px;
+}
+.ctaButton{
+	width:270px;
+	margin-bottom: 8px;
+	height:50px;
+	background-color: #0088CC;
+	color:#fffff;
+	text-align: center;
+	line-height: 100%;
+	padding:18px;
+	font-size: 14px;
+	font-weight: 300;
+	
+}
+
+.ctaButton:hover{
+
+	background-color: #01AAFF;
+	
+}
+/**************************/
+/*property carousel styles*/
+/**************************/
+
+
+.property-carousel {
+	/*position: relative;*/
+	top:-175px;
+	left:370px;
+	width:315px;
+	height:208px;
+	background-color: #eeeeee;
+
+}
+.property-carousel div{
+	margin:0 auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width:315px;
+	height:208px;
+	background-color: #eeeeee;
+
+}
+
+.my-next{
+  position: absolute;
+  top:49px;
+  right: 5px;
+  height: 40px;
+  z-index: 99999;
+  cursor: pointer;
+ }
+
+.my-prev{
+  position: absolute;
+  top:50px;
+  left: 5px;
+  height: 40px;
+  z-index: 99999;
+  cursor: pointer;
+ 
+}
+
+
+/**************************/
+/*carousel slide stlyles*/
+/**************************/
+
+.slide1{
+	background: url('https://cdn.mlhdocs.com/rcp_files/auctions/B-160/photos/193034240-23-G.jpg');
+	background-size: 100% 100%;
+	
+}
+.slide2{
+	background: url('https://cdn.mlhdocs.com/rcp_files/auctions/B-160/photos/193033419-50-G.jpg');
+	background-size: 100% 100%;
+}
+.slide3{
+	background: url('https://cdn.mlhdocs.com/rcp_files/auctions/B-160/photos/193034260-1-G.jpg');
+	background-size: 100% 100%;
+}
+.slide4{
+	background: url('https://cdn.mlhdocs.com/rcp_files/auctions/B-161/photos/193034686-1-G.jpg');
+	background-size: 100% 100%;
+}
+.slide5{
+	background: url('https://cdn.mlhdocs.com/rcp_files/auctions/B-161/photos/193035275-1-G.jpg');
+	background-size: 100% 100%;
+}
+
+.propertyInfo{
+	position: absolute;
+	height:80px;
+	width:100%;
+	bottom:0;
+	background-color: rgba(255,255,255,.5);
+}
+
+.propertyInfo p{
+	margin-left:23px;
+	margin-top:5px;
+	Font-family: "Avenir", Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+.propertyInfo p strong{
+	font-size: 16px;
+}
+.details{color:#0088CC; }
+.details:hover{color:#01AAFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
