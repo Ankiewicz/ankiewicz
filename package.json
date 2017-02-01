@@ -19,7 +19,7 @@
     "waypoints": "^4.0.1"
   },
   "engines": {
-    "node": "4.1.1",
+    "node": "*",
     "express": "*"
   },
   "repository": {
