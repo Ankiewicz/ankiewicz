@@ -11,22 +11,22 @@ var mailer = require('sendgrid-mailer').config(process.env.SENDGRID_API_KEY);
 
 
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
   res.render('./index')
 })
 
-router.get('/marketing', function(req, res) {
+router.get('/marketing', function(req, res, next) {
   res.render('./marketing')
 })
 
-router.get('/d3map', function(req, res) {
+router.get('/d3map', function(req, res, next) {
   res.render('./d3map')
 })
-router.get('/scoreboard', function(req, res) {
+router.get('/scoreboard', function(req, res, next) {
   res.render('./scoreboard')
 })
 
-router.post('/sendEmail', function(req, res){
+router.post('/sendEmail', function(req, res, next){
 
   //Create email data
   const email = {
@@ -39,7 +39,7 @@ router.post('/sendEmail', function(req, res){
 
   //Send away
   mailer.send(email); //Returns promise
-
+  
 })
 
 
