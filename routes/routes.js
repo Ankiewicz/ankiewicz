@@ -3,8 +3,8 @@ var router = require('express').Router()
 var ejs = require('ejs')
 var engine = require('ejs-mate')
 var d3 = require('d3')
-var helper = require('sendgrid').mail;
-var mailer = require('sendgrid-mailer').config(process.env.SENDGRID_API_KEY);
+// var helper = require('sendgrid').mail;
+// var mailer = require('sendgrid-mailer').config(process.env.SENDGRID_API_KEY);
 
 
 
@@ -40,7 +40,7 @@ router.post('/sendEmail', function(req, res){
   // //Send away
   // mailer.send(email); //Returns promise
 
-});
+})
 
 
 
