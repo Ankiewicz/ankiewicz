@@ -4,7 +4,7 @@ var ejs = require('ejs')
 var engine = require('ejs-mate')
 var d3 = require('d3')
 // var helper = require('sendgrid').mail;
-// var mailer = require('sendgrid-mailer').config(process.env.SENDGRID_API_KEY);
+var mailer = require('sendgrid-mailer').config(process.env.SENDGRID_API_KEY);
 
 
 
@@ -29,16 +29,16 @@ router.get('/scoreboard', function(req, res) {
 router.post('/sendEmail', function(req, res){
 
   //Create email data
-  // const email = {
-  //   to: 'ankiewicz84@gmail.com',
-  //   from: '<b@example.org>',
-  //   subject: 'Hello world',
-  //   text: 'Hello plain world!',
-  //   html: '<p>Hello HTML world!</p>',
-  // };
-  //
-  // //Send away
-  // mailer.send(email); //Returns promise
+  const email = {
+    to: 'ankiewicz84@gmail.com',
+    from: '<b@example.org>',
+    subject: 'Hello world',
+    text: 'Hello plain world!',
+    html: '<p>Hello HTML world!</p>',
+  };
+
+  //Send away
+  mailer.send(email); //Returns promise
 
 })
 
