@@ -139,23 +139,22 @@
 
   <div class="container">
     <div class="row">
-      <div class="bodyCopy col-sm-6 ">
+      <div class="bodyCopy col-sm-5 ">
           <div class="col-md-10 col-md-offset-1">
             <p>
-              I love designing and coding. I work in Silicon Valley as a Front-end Web and HTML Email Developer. I have authored a book available on Amazon, Simple and Fit. I am a veteran of the US Marine Corps.
+              I love designing and coding. I work in Silicon Valley as a Front-end Web and HTML Email Developer. I have authored a book available on <a  href="https://www.amazon.com/Simple-Fit-Jonathan-Paul-Ankiewicz/dp/0615601634/ref=sr_1_1?ie=UTF8&qid=1419335440&sr=8-1&keywords=simple+and+fit">Amazon, Simple and Fit.</a> I am a veteran of the US Marine Corps.
             </p>
             <p>
               Coding is my life!! and developing every more every!
             </p>
           </div>
       </div>
-      <div class="skills col-sm-6">
+      <div class="skills col-sm-7">
         <ul>
           <li>BRANDING</li>
           <li>WEB PAGES</li>
           <li>USER FLOW</li>
           <li>HTML EMAILS</li>
-          <li>PRINT DESIGN</li>
           <li>UX/UI DESIGN</li>
           <li>MOBILE DESIGN</li>
           <li>PHOTOGRAPHY</li>
@@ -272,7 +271,7 @@
 
       <div class="col-sm-6 formZone">
 
-        <form id="formSection" method="post" action="/sendEmail">
+        <form id="formSection" method="POST" action="/sendEmail"  enctype="application/x-www-form-urlencoded">
           <div class="formlabelContact ">
             <div class="contactMeLocation">
               <span class="contactMeLabel">CONTACT</span>
@@ -294,7 +293,7 @@
                   </tr>
                   <tr>
                     <td colspan="4" class="welcomeFromMe">
-                      <input type="name">
+                      <input type="name" name="name">
                     </td>
                   </tr>
                   <tr>
@@ -319,7 +318,7 @@
                     </tr>
                     <tr>
                       <td colspan="4" class="welcomeFromMe">
-                        <input type="name">
+                        <input type="email" name="email">
                       </td>
                     </tr>
                     <tr>
@@ -344,7 +343,7 @@
                     </tr>
                     <tr>
                       <td colspan="4" class="welcomeFromMe">
-                        <input type="name">
+                        <input type="phone" name="phone">
                       </td>
                     </tr>
                     <tr>
@@ -369,7 +368,7 @@
                     </tr>
                     <tr>
                       <td colspan="4" class="welcomeFromMe">
-                        <input type="name">
+                        <input type="text" name="text">
                       </td>
                     </tr>
                     <tr>

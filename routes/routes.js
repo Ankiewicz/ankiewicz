@@ -28,18 +28,20 @@ router.get('/scoreboard', function(req, res, next) {
 
 router.post('/sendEmail', function(req, res, next){
 
-  //Create email data
+  console.log(req.body);
+    res.json(req.body);
+  // Create email data
   const email = {
-    to: 'ankiewicz84@gmail.com',
-    from: '<b@example.org>',
+    to: 'ankiewicz84@gmail.com,' + req.body.email,
+    from: 'ankiewicz84@gmail.com',
     subject: 'Hello world',
     text: 'Hello plain world!',
-    html: '<p>Hello HTML world!</p>',
+    html: '<p>Hello HTML world!</p>' + req.body.text,
   };
 
-  //Send away
+  // Send away
   mailer.send(email); //Returns promise
-  
+
 })
 
 

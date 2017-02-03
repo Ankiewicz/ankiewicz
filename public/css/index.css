@@ -43,9 +43,13 @@ h3{
 
 a,
 a:visited,
-a:hover,
 a:active{
   text-decoration: none;
+  color: #F89827;
+}
+a:hover{
+  text-decoration: none;
+  opacity: .5;
 }
 
 /*======================*/
@@ -784,7 +788,7 @@ SLIDER
   background-color: #f89827;
   position: relative;
   padding: 10px 40px;
-  color: #fff;
+  color: #fff!important;
   transition: box-shadow 0.3s ease-in, background-color 0.2s ease-in;
 
 }
