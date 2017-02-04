@@ -36,11 +36,17 @@
 
   <!-- social side bar links -->
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
   <script src="https://d3js.org/d3.v3.min.js" type="text/javascript"></script>
   <script src="https://d3js.org/d3-queue.v3.min.js"></script>
   <!-- STYLE SHEET -->
+  <link rel="stylesheet" type="text/css" href="css/resets.css">
+  <link rel="stylesheet" type="text/css" href="css/animation.min.css">
+  <link rel="stylesheet" type="text/css" href="css/marketingCSS.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
 
@@ -52,7 +58,8 @@
 <!-- NAVBAR
   ================================================== -->
 
-<body>
+  <% include ./partials/header %>
+  <body >
 
   <div class="mobileGreetings">
     <div class="iAm">Hi, I'am</div>
@@ -207,7 +214,7 @@
 <div class="ads">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12 ">
             <h2>INTERACTIVE ADVERTISING </h2>
             <h3>  HTML5/JAVASCRIPT/GOOGLE WEBDESIGNER</h2>
             <p>This ad lived on the homepage of the LA Times Website for several months</p>
@@ -427,6 +434,48 @@
               $('.diffMe div').removeClass('checked');
               $('.geekMe').addClass('checked')
             });
+
+
+
+                  $('body').waypoint(function(direction) {
+                    if (direction == 'down') {
+                      $('.Mynavbar').addClass('sticky');
+                    } else {
+                      $('.Mynavbar').removeClass('sticky');
+                    }
+                  }, {
+                    offset: '-300'
+                  });
+
+                  // side bar script
+
+                  function toggleSlider() {
+                    // $('.Mynavbar').toggleClass('safarifix');
+                    $('body').toggleClass('slided');
+                    $('aside').toggleClass('slidedside');
+                    $('.overlay').toggleClass('overlayOn');
+
+                    $('.burger').toggleClass('activeBurger')
+                  };
+
+                  $('.mobileAdd').click(function(event) {
+                    /* Act on the event */
+                    event.preventDefault();
+                    console.log("mobileAdd clicked")
+                    toggleSlider();
+                  });
+
+                  $('.overlay').click(function(event) {
+                    /* Act on the event */
+                    toggleSlider();
+                  });
+
+                  $('.icon-cancel').click(function(event) {
+                    /* Act on the event */
+                    toggleSlider();
+                  });
+
+
         </script>
 </body>
 

@@ -142,3 +142,9 @@
       height: 400px;
       overflow: hidden;
     }
+    #mobileDrop2 a svg,
+    #sidebarlink1 a svg{
+      width: inherit;
+      height: inherit;
+      border: none!important;
+    }

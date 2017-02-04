@@ -14,7 +14,12 @@ body {
   margin: 170px auto;
   box-shadow: 0 4px 0px #333;
   border-radius: 15px;
-
+  /*position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;*/
 
 }
 
@@ -38,7 +43,7 @@ body {
 
 .header .stats,
 .header .stopwatch {
-  width: 170px;
+  /*width: 170px;*/
 }
 
 .stats {
@@ -221,3 +226,134 @@ body {
     color: #fafafa;
     cursor: pointer;
   }
+
+
+  * {
+      -webkit-transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+      transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+  }
+  a{
+    text-decoration: none;
+  }
+    /* * Addresses margins handled incorrectly in IE 6/7. */
+    body {
+      position: relative;
+      opacity: 1;
+      left: 0;
+      font-family: "averta", Arial, Helvetica, sans-serif !important;
+      -webkit-transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+      transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+    }
+
+    section,
+    header,
+    footer {
+      -webkit-box-flex: 1 100%;
+      -moz-box-flex: 1 100%;
+      flex: 1 100%;
+    }
+
+    .burger {
+      display: block;
+      width: 20px;
+      height: 4px;
+      background: #fff;
+      margin-bottom: 3px;
+      border-radius: 2px;
+      opacity: 1;
+    }
+
+    .burger:last-child {
+      margin-bottom: 0px;
+    }
+    /*Section order*/
+    header{
+        -webkit-box-ordinal-group: 1;
+          -moz-box-ordinal-group: 1;
+          -ms-flex-order: 1;
+          order: 1;
+      }
+
+  .tenXlogo {
+      width: 125px;
+    }
+
+    .headerbar {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .headerbar div {
+      align-self: center;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0;
+      padding: 0;
+    }
+
+    header * {
+      -webkit-transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+      transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+    }
+
+    header {
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .headerbar a {
+      align-self: center;
+      margin: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #logo {
+      margin-right: auto!important;
+    }
+    /*before state of nav*/
+
+    .Mynavbar {
+      position: fixed;
+      top: 0;
+      text-decoration: none;
+      list-style: none;
+      margin-left: -10px;
+      padding: 15px 0;
+      z-index: 9999999;
+      -webkit-transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+      transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+    }
+    .slided .Mynavbar{
+      margin-left: 0px;
+    }
+    .safarifix {
+      top: 0;
+      left: 260px;
+      -webkit-transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+      transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+    }
+    /*after state of nav*/
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      margin-left: -10px;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+  }
+    .loading{
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      top: 0;
+      left:0;
+      right: 0;
+      bottom:0;
+      margin: auto;
+    }

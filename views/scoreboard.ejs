@@ -3,15 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Scoreboard</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+    <style >
+
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/marketingCSS.css">
     <link rel="stylesheet" href="css/app.css" />
   </head>
 
+
+  <% include ./partials/header %>
+
   <body>
-    <div id="container">Loading...</div>
+    <div id="container">
+      <div class="loading">
+        Loading...
+      </div>
+    </div>
 
 
 
-    
+
 
 
     <script type="text/javascript" src="vendor/react.js"></script>
@@ -19,5 +38,47 @@
     <script type="text/javascript" src="vendor/babel-browser.min.js"></script>
     <script type="text/babel" src="js/app.jsx"></script>
 
+      <script>
+
+                        $('body').waypoint(function(direction) {
+                          if (direction == 'down') {
+                            $('.Mynavbar').addClass('sticky');
+                          } else {
+                            $('.Mynavbar').removeClass('sticky');
+                          }
+                        }, {
+                          offset: '-300'
+                        });
+
+                        // side bar script
+
+                        function toggleSlider() {
+                          // $('.Mynavbar').toggleClass('safarifix');
+                          $('body').toggleClass('slided');
+                          $('aside').toggleClass('slidedside');
+                          $('.overlay').toggleClass('overlayOn');
+
+                          $('.burger').toggleClass('activeBurger')
+                        };
+
+                        $('.mobileAdd').click(function(event) {
+                          /* Act on the event */
+                          event.preventDefault();
+                          console.log("mobileAdd clicked")
+                          toggleSlider();
+                        });
+
+                        $('.overlay').click(function(event) {
+                          /* Act on the event */
+                          toggleSlider();
+                        });
+
+                        $('.icon-cancel').click(function(event) {
+                          /* Act on the event */
+                          toggleSlider();
+                        });
+
+
+      </script>
   </body>
 </html>
