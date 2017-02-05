@@ -238,6 +238,17 @@ HTML advertising
     border-color: #f4f4ef transparent transparent transparent;
 }
 
+.greyTriangle2 {
+    z-index: 1;
+    position: absolute;
+    margin-top: -180px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 274px 424px 0 0;
+    border-color: #f4f4ef transparent transparent transparent;
+}
+
 .titlebox {
     position: relative;
     top: -150px;
@@ -269,6 +280,11 @@ HTML advertising
     z-index: 2;
 }
 
+#gitRepo svg{
+    width:20px;
+    height: 20px;
+    top:3px;
+}
 
 /*======================*/
 
@@ -286,6 +302,7 @@ HTML advertising
 
 }
 
+
 .skills {
     padding: 0 20px 0 0;
     margin: 0;
@@ -299,6 +316,26 @@ HTML advertising
 
 .skills ul li {
     text-align: right;
+    text-decoration: none;
+    list-style: none;
+    font-size: 22px;
+    color: #666666;
+}
+
+
+.gitSection ul {
+    float: left;
+    border-left: 10px solid #d1792a;
+    padding-left: 15px;
+}
+.gitSection ul {
+    float: left;
+    border-left: 10px solid #d1792a;
+    padding-left: 15px;
+}
+
+.gitSection ul li {
+    text-align: left;
     text-decoration: none;
     list-style: none;
     font-size: 22px;
@@ -322,11 +359,7 @@ HTML advertising
 
 
 /*======================*/
-
-
 /*skills logo*/
-
-
 /*========================*/
 
 .skillLogos {
