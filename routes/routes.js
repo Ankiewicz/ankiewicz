@@ -5,7 +5,7 @@ var engine = require('ejs-mate')
 var d3 = require('d3')
 // var helper = require('sendgrid').mail;
 // var mailer = require('sendgrid-mailer').config(process.env.SENDGRID_API_KEY);
-var mailer = require('sendgrid-mailer').config('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')
+var mailer = require('sendgrid-mailer').config('process.env.SENDGRID_API_KEY')
 
 
 

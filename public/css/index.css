@@ -1,19 +1,7 @@
-/*
-Theme Name: Bootstrap to WordPress
-Theme URI: http://www.jpankiewicz.com
-Author: Jonathan Ankiewicz
-Author URI: http://www.jpankiewicz.com
-Description: GNU General Public License v2 or later
-License URI: http:www.gnu.org/licenses/gpl-2.0.html
-Text Domain: bootstrap-to-wp
 
-This teme, like WordPress, is licensed under the GPL.
-Use it to make something cool, and share what you're laerned with others.
-
-*/
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,600);
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400');
 
 * {
     -webkit-transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
@@ -32,7 +20,7 @@ body,
 
 p,
 h3{
-    font-family: 'Open Sans',helvetica, sans-serif;
+    font-family: 'Roboto',helvetica, sans-serif;
     color:#6D6D6D!important;
     font-weight: 300;
 }
@@ -108,7 +96,7 @@ a:hover{
   width: 50%;
   float: left;
   text-align: center;
-  font-family: 'Open Sans',helvetica, sans-serif;
+  font-family: 'Roboto',helvetica, sans-serif;
   color: #888;
   cursor: pointer;
    position: relative;
@@ -134,7 +122,7 @@ a:hover{
 }
 .diffMe div.checked{
   text-align: center;
-  font-family: 'Open Sans',helvetica, sans-serif;
+  font-family: 'Roboto',helvetica, sans-serif;
   color: #F89827;
 }
 
@@ -179,7 +167,7 @@ a:hover{
 }
 
 .iAm {
-    font-family: 'Open Sans', helvetica, sans-serif;
+    font-family: 'Roboto', helvetica, sans-serif;
     font-size: 18px;
     color: #6D6D6D!important;
     padding: 0px 10px;
@@ -455,7 +443,7 @@ textarea,
 }
 .formLabel {
 	width:200px;
-    font-family: 'Open Sans',helvetica, sans-serif;
+    font-family: 'Roboto',helvetica, sans-serif;
     font-size: 18px;
     color: #6D6D6D!important;
     padding: 0px 28px;
@@ -572,7 +560,7 @@ infographics
         }
         .formLabel {
             width:100%;
-            font-family: 'Open Sans', helvetica, sans-serif;
+            font-family: 'Roboto', helvetica, sans-serif;
             font-size: 18px;
             color: #6D6D6D!important;
             /*padding: 0px 28px;*/
@@ -751,6 +739,7 @@ polyline{
 .smallNotes{
   text-align: center;
   font-size: 10px;
+  line-height: 12px;
 }
 .labelValue{
 	font-size: 60%;
@@ -759,7 +748,7 @@ polyline{
 }
 
 .toolTip {
-    font-family: 'Open Sans',helvetica, sans-serif;
+    font-family: 'Roboto',helvetica, sans-serif;
     position: absolute;
     display: none;
     width: auto;
@@ -769,13 +758,13 @@ polyline{
     border-radius: 8px 8px 8px 8px;
     box-shadow: -3px 3px 15px #888888;
     color: black;
-    font: 12px 'Open Sans',helvetica, sans-serif;
+    font: 12px 'Roboto',helvetica, sans-serif;
     padding: 5px;
     text-align: center;
     z-index: 99;
 }
 text {
-  font: 12px 'Open Sans',helvetica, sans-serif;
+  font: 12px 'Roboto',helvetica, sans-serif;
   fill: #fff;
   margin-top:5px;
 }
@@ -830,15 +819,18 @@ SLIDER
     margin-left: 30px;
     width: 300px;
     text-align: center;
-}
-.scoreboardSnippet p{
   margin-bottom: 20px;
 
 }
-
+.d3mapSlider p,
+.scoreboardSnippet p{
+  font-size: 14px!important;
+  line-height: 18px;
+  padding: 10px;
+}
 .scoreboardApp {
     width: 90%;
-    margin-top:-100px;
+    margin-top:-290px;
 }
 
 .scoreboardBtn{
@@ -871,6 +863,13 @@ SLIDER
     background-size: 1000%;
     transition: background-size 0.5s ease-in, opacity 0.5s ease-in 0.22s;
     opacity: 0;
+}
+
+.d3mapSlider a{
+  text-align: center;
+}
+.showOnMobile{
+  display: none!important;
 }
 .slick-slider {
     position: relative;
@@ -983,7 +982,7 @@ SLIDER
 }
 .slider {
     width: 100vw;
-    height: 600px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     max-width: initial;
@@ -996,7 +995,7 @@ SLIDER
 
 .slidingSection {
     /*width: 100%;*/
-    height: 600px;
+    height: 400px;
 }
 
 .slideOne,
@@ -1055,7 +1054,7 @@ SLIDER
     background-color: #78b8d8;
     z-index: 9;
     background-size: 100% 100%;
-    height: 600px!important;
+    height: 400px!important;
     width: 100%;
 }
 
@@ -1063,7 +1062,7 @@ SLIDER
     background-color: #f1f2f2;
     z-index: 9;
     background-size: cover;
-    height: 600px!important;
+    height: 400px!important;
     width: 100%;
 }
 
@@ -1071,7 +1070,7 @@ SLIDER
     background-color: #f1f2f2;
     z-index: 9;
     background-size: cover;
-    height: 600px!important;
+    height: 400px!important;
     width: 100%;
 }
 
@@ -1182,6 +1181,17 @@ li[class="slick-active"] {
   }
   .scoreboardApp {
       width: 100%;
+      margin-top:-100px;
+  }
+  .d3MapmobileCSS img{
+    width: 50%;
+    float: left;
+  }
+  .showOnMobile{
+    display: block;
+  }
+  .doNotshowOnMobile{
+    display: none!important;
   }
     #heroTextContent h2,
     #heroTextContent h3,
