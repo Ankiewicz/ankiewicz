@@ -2,7 +2,7 @@
 * Please note this Portfolio is currently under construction.
 
 
-##[Ankiewicz.heroku.com](Ankiewicz.heroku.com)
+##[https://ankiewicz.herokuapp.com/](https://ankiewicz.herokuapp.com/)
 
 ##There is still plenty to do as I move forward:
 
