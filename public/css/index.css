@@ -7,14 +7,14 @@
     -webkit-transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
     transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
 }
-body{
+body,
+html{
   overflow-x: hidden;
 }
 body,
 .jumbotron,
 .container {
     width: 100%!important;
-
 }
 
 
@@ -189,10 +189,12 @@ a:hover{
 
 
 .Mynavbar {
+  width:100vw;
   visibility:  hidden;
   top:-100px;
 }
 .sticky {
+  width:100vw;
   visibility: visible;
   top:0px;
 }
@@ -596,6 +598,14 @@ infographics
         #heroBackground {
             margin-top: 10px;
         }
+        #infographicSkills {
+            height: 260px;
+            width: 500px;
+            margin: 0 auto;
+            transform: scale(.8)!important;
+            margin-top: 40px;
+            margin-left: -40px!important;
+        }
         .greetings{
             margin-left: 2%;
             margin-top: 2%;
@@ -740,6 +750,7 @@ polyline{
   text-align: center;
   font-size: 10px;
   line-height: 12px;
+  padding: 10px;
 }
 .labelValue{
 	font-size: 60%;
@@ -837,6 +848,7 @@ SLIDER
   background-color: #f89827;
   position: relative;
   padding: 10px 40px;
+  top: 20px;
   color: #fff!important;
   transition: box-shadow 0.3s ease-in, background-color 0.2s ease-in;
 
@@ -1023,6 +1035,11 @@ SLIDER
     line-height: 30px;
 }
 
+.slideOne h1,
+.slideTwo h1,
+.slideThree h1{
+  padding: 0px 10px;
+}
 .slideOne h2,
 .slideTwo h2,
 .slideThree h2,
@@ -1034,6 +1051,8 @@ SLIDER
 .slideThree p {
     font-size: 18px;
     color: #333!important;
+    padding: 5px 20px;
+    width: 100%;
 }
 
 .slideOne h2,
@@ -1188,7 +1207,7 @@ li[class="slick-active"] {
     float: left;
   }
   .showOnMobile{
-    display: block;
+    display: block!important;
   }
   .doNotshowOnMobile{
     display: none!important;

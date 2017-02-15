@@ -42,7 +42,7 @@ router.post('/sendEmail', function(req, res, next){
 
   // Send away
   mailer.send(email); //Returns promise
-  res.send({success: 'success'})
+  res.json({success: 'success'})
 })
 
 
