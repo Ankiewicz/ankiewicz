@@ -514,6 +514,12 @@ infographics
 /*mediea queries*/
 
     @media (max-width:768px){
+      .ads iframe{
+        display:none;
+      }
+      .smallNotes:after {
+        content: " The interactive ad is 0nly visible on screens larger then 768px"
+      }
         #heroBackground {
             padding-bottom: 50%;
 
@@ -826,7 +832,7 @@ SLIDER
 
 .scoreboardSnippet{
     /*position: absolute;*/
-    margin-top:100px;
+    margin-top:10px;
     margin-left: 30px;
     width: 300px;
     text-align: center;
@@ -841,7 +847,7 @@ SLIDER
 }
 .scoreboardApp {
     width: 90%;
-    margin-top:-290px;
+    margin-top:-160px;
 }
 
 .scoreboardBtn{
@@ -1013,7 +1019,7 @@ SLIDER
 .slideOne,
 .slideTwo,
 .slideThree {
-    padding: 60px 0px 0px 50px;
+    padding: 40px 0px 0px 50px;
 }
 
 .slideOnepad,
