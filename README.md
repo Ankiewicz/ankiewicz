@@ -18,3 +18,7 @@
       Todo's:
       1) Complete HTML template for both parties to receive the email with all contact information inside
       2) Setup form to ship form data to the server using an ajax call so that I can utilize smooth form interactions upon send
+
+
+##Background hero images clickable
+    I have built a way to make this happen. An example will be available shortly.
