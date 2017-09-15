@@ -16,6 +16,10 @@ router.get('/', function(req, res, next) {
   res.render('./index')
 })
 
+router.get('/font-ankie', function(req, res, next) {
+  res.render('./public/font-website/index.html')
+})
+
 router.get('/marketing', function(req, res, next) {
   res.render('./marketing')
 })

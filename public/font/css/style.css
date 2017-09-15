@@ -1,0 +1,150 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,100,500);
+*{
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	width: 100%;
+
+}
+ h1,  h2{
+	text-align: center;
+	font-weight: 300;
+	font-size: 3em;
+	
+} 
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:visited{text-decoration: none;}
+a:active{text-decoration: none;}
+
+
+
+header{
+	background-color: #32B0E5;
+	
+	margin:0 auto;
+	
+}
+
+.image{
+	margin:0 auto;
+	width: 80%;
+	padding: 100px 0;
+}
+
+header img{
+	width: 80%;
+	display:block;
+	margin:0 auto;
+}
+
+.buttonsection{
+	padding: 60px 0px ;
+	width:100%;
+	background-color: #275B6F;
+}
+.button{
+	width:80%;
+	margin: 0 auto;
+
+
+}
+.dlfont{
+	padding: 20px 40px;
+	border-radius: 5px;
+	background-color: #F26D85;
+	text-decoration: none;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.aboutfont{
+	background-color: #4BADD5;
+	width: 100%;
+	
+}
+.aboutfontcontent{
+	padding: 60px;
+	widows: 100%;
+}
+.aboutfontcentent p{
+	color: #ddd;
+	margin:0 auto;
+}
+.aboutfontcontent h1, .aboutfontcontent h2{
+	text-align: center;
+	font-weight: 300;
+}
+.aboutfontcontent h1{
+	font-size: 3em;
+	color: #fff;
+} 
+.aboutfontcontent h2{
+	font-size: 2em;
+	color: #f2f2f2;
+} 
+.fontsamplesection{
+	width:100%;
+
+}
+.fontsample{
+	width:80%;
+	margin:0 auto;
+	padding:100px 0;
+}
+.fontsample h1{
+	text-align: center;
+}
+.fontsample img{
+	width:100%;
+	
+}
+
+.exampleheaders{
+	width:100%;
+	margin:0 auto;
+	padding:20px 0;
+	background-color: #F1B691;
+}
+.headersamples{
+	width:80%;
+	margin:0 auto;
+	padding:0 0 100px 0;
+}
+.headersamples h1{
+	text-align: center;
+	margin-bottom:50px;
+}
+.headersamples img{
+	width:100%;
+
+	
+}
+
+.caseUse{
+	width:100%;
+	margin:0 auto;
+	padding:20px 0;
+	background-color: #275B6F;
+}
+.caseUseSample{
+	width:80%;
+	margin:0 auto;
+	padding:0 0 100px 0;
+}
+.caseUseSample h1{
+	text-align: center;
+	margin-bottom:50px;
+	color:#fff;
+}
+.caseUseSample img{
+	width:100%;
+	margin-bottom:5px;
+
+	
+}

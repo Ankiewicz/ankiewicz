@@ -5,6 +5,7 @@ var bodyParser = require("body-parser");
 var ejs = require('ejs')
 var engine = require('ejs-mate')
 var d3 = require('d3')
+var path = require('path')
 
 // app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
+app.use( express.static( path.join( __dirname, 'public' ) ) )
 
 var routes = require('./routes/routes');
 app.use(routes);
