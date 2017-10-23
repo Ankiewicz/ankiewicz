@@ -286,12 +286,27 @@ HTML advertising
 
 .bodyCopy {
     margin:0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 16px;
     padding-bottom: 40px;
 
 }
 
+.truncateExpand {
+  height: 300px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  -moz-box-shadow: inset 0 -5px 16px -12px #000000;
+  -webkit-box-shadow: inset 0 -5px 16px -12px #000000;
+  box-shadow: inset 0 -5px 16px -12px #000000;
+}
+
+.truncateExpand:hover {
+  background-color: #f7f7f7;
+}
+.truncateExpand p {
+  margin-bottom: 15px;
+}
 
 .skills {
     padding: 0 20px 0 0;
@@ -427,7 +442,6 @@ textarea,
     padding-right: 15px;
     padding-top: 50px;
     border-right: 10px solid #d1792a;
-
 }
 
 .formZone {
