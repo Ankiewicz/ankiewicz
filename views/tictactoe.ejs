@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>County Mapping</title>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <!-- waypoints -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+        <link rel="stylesheet" type="text/css" href="css/resets.css">
+        <link rel="stylesheet" href="/css/style.css">
+
+
+
+        <!-- Attempt at tricking the Browser to use GPU to render map-->
+        <style>
+            .body{
+              -webkit-transform: translateZ(0);
+              -moz-transform: translateZ(0);
+              -ms-transform: translateZ(0);
+              -o-transform: translateZ(0);
+              transform: translateZ(0);
+            }
+        </style>
+    </head>
+      <% include ./partials/header %>
+
+    <body>
+<!-- ===================================================-->
+<!-- 100% CSS, THE OTHER CODE ON THE PAGE IS FOR THE NAV BAR=================-->
+<!-- ===================================================-->
+      <style media="screen">
+          @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Josefin+Sans');
+        body {
+          background: #41C1E8;
+        }
+
+        * {
+          font-family: 'Baloo Bhaijaan', cursive;
+          color: #565656;
+        }
+
+        .board > div{
+          position: absolute;
+          top:0;
+          right:0;
+          left:50px;
+          bottom:0;
+          margin: auto;
+          width: 300px;
+          height: 300px;
+        }
+
+        label {
+          height: 50px;
+          width: 50px;
+        }
+        input {
+          display: none;
+        }
+
+        .response {
+          position: fixed;
+          bottom: 20px;
+        }
+        h1 {
+          text-align: center;
+          font-size: 52px;
+          line-height: 56px;
+        }
+      </style>
+        <h1> TIC TAC TOE <br/>
+          100% CSS</h1>
+        <div class="board">
+          <div class="r1 c1">
+            <!-- R1C1 ///////////////////////////////////-->
+            <!-- <div class="displayBoxr1c1"> -->
+              <!-- Hidden -->
+              <input type="radio" class="r1c1box1" name="boxr1c1" id="r1c1box1"/><br/>
+              <input type="radio" class="r1c1box2" name="boxr1c1" id="r1c1box2"/>
+              <input type="radio" class="r1c1box3" name="boxr1c1" id="r1c1box3"/>
+              <!--  visuals-->
+              <label class="r1c1Label1" for="r1c1box1"></label><br/>
+              <label class="r1c1Label2" for="r1c1box2"></label><br/>
+              <label class="r1c1Label3" for="r1c1box3" ></label><br/>
+              <div class="r1c1box1Div"><!-- Filled in with css content--></div>
+              <div class="response"><!-- Filled in with css content--></div>
+            <!-- </div> -->
+          <head>
+            <link rel="stylesheet" href="tictac/r1c1.css">
+          </head>
+            <!-- End R1C2 ///////////////////////////////////-->
+
+
+            <!-- R1C2 ///////////////////////////////////-->
+            <!-- <div class="displayBoxr1c2"> -->
+              <!-- Hidden -->
+              <input type="radio" class="r1c2box1" name="boxr1c2" id="r1c2box1"/><br/>
+              <input type="radio" class="r1c2box2" name="boxr1c2" id="r1c2box2"/>
+              <input type="radio" class="r1c2box3" name="boxr1c2" id="r1c2box3"/>
+              <!--  visuals-->
+              <label class="r1c2Label1" for="r1c2box1"></label><br/>
+              <label class="r1c2Label2" for="r1c2box2"></label><br/>
+              <label class="r1c2Label3" for="r1c2box3" ></label><br/>
+              <div class="r1c2box1Div"><!-- Filled in with css content--></div>
+              <div class="response"><!-- Filled in with css content--></div>
+            <!-- </div> -->
+          <head>
+            <link rel="stylesheet" href="tictac/r1c2.css">
+          </head>
+            <!-- End R1C2 ///////////////////////////////////-->
+
+              <!-- R1C3 ///////////////////////////////////-->
+              <!-- <div class="displayBoxr1c3"> -->
+                <!-- Hidden -->
+                <input type="radio" class="r1c3box1" name="boxr1c3" id="r1c3box1"/><br/>
+                <input type="radio" class="r1c3box2" name="boxr1c3" id="r1c3box2"/>
+                <input type="radio" class="r1c3box3" name="boxr1c3" id="r1c3box3"/>
+                <!--  visuals-->
+                <label class="r1c3Label1" for="r1c3box1"></label><br/>
+                <label class="r1c3Label2" for="r1c3box2"></label><br/>
+                <label class="r1c3Label3" for="r1c3box3" ></label><br/>
+                <div class="r1c3box1Div"><!-- Filled in with css content--></div>
+                <div class="response"><!-- Filled in with css content--></div>
+              <!-- </div> -->
+            <head>
+              <link rel="stylesheet" href="tictac/r1c3.css">
+            </head>
+              <!-- End R1C3 ///////////////////////////////////-->
+
+              <!-- R1C4 ///////////////////////////////////-->
+              <!-- <div class="displayBoxr2c1"> -->
+                <!-- Hidden -->
+                <input type="radio" class="r2c1box1" name="boxr2c1" id="r2c1box1"/><br/>
+                <input type="radio" class="r2c1box2" name="boxr2c1" id="r2c1box2"/>
+                <input type="radio" class="r2c1box3" name="boxr2c1" id="r2c1box3"/>
+                <!--  visuals-->
+                <label class="r2c1Label1" for="r2c1box1"></label><br/>
+                <label class="r2c1Label2" for="r2c1box2"></label><br/>
+                <label class="r2c1Label3" for="r2c1box3" ></label><br/>
+                <div class="r2c1box1Div"><!-- Filled in with css content--></div>
+                <div class="response"><!-- Filled in with css content--></div>
+              <!-- </div> -->
+            <head>
+              <link rel="stylesheet" href="tictac/r2c1.css">
+            </head>
+              <!-- End R1C4 ///////////////////////////////////-->
+
+              <!-- R1C5 ///////////////////////////////////-->
+              <!-- <div class="displayBoxr2c2"> -->
+                <!-- Hidden -->
+                <input type="radio" class="r2c2box1" name="boxr2c2" id="r2c2box1"/><br/>
+                <input type="radio" class="r2c2box2" name="boxr2c2" id="r2c2box2"/>
+                <input type="radio" class="r2c2box3" name="boxr2c2" id="r2c2box3"/>
+                <!--  visuals-->
+                <label class="r2c2Label1" for="r2c2box1"></label><br/>
+                <label class="r2c2Label2" for="r2c2box2"></label><br/>
+                <label class="r2c2Label3" for="r2c2box3" ></label><br/>
+                <div class="r2c2box1Div"><!-- Filled in with css content--></div>
+                <div class="response"><!-- Filled in with css content--></div>
+              <!-- </div> -->
+            <head>
+              <link rel="stylesheet" href="tictac/r2c2.css">
+            </head>
+              <!-- End R2C2 ///////////////////////////////////-->
+
+              <!-- R2C3 ///////////////////////////////////-->
+              <!-- <div class="displayBoxr2c3"> -->
+                <!-- Hidden -->
+                <input type="radio" class="r2c3box1" name="boxr2c3" id="r2c3box1"/><br/>
+                <input type="radio" class="r2c3box2" name="boxr2c3" id="r2c3box2"/>
+                <input type="radio" class="r2c3box3" name="boxr2c3" id="r2c3box3"/>
+                <!--  visuals-->
+                <label class="r2c3Label1" for="r2c3box1"></label><br/>
+                <label class="r2c3Label2" for="r2c3box2"></label><br/>
+                <label class="r2c3Label3" for="r2c3box3" ></label><br/>
+                <div class="r2c3box1Div"><!-- Filled in with css content--></div>
+                <div class="response"><!-- Filled in with css content--></div>
+              <!-- </div> -->
+            <head>
+              <link rel="stylesheet" href="tictac/r2c3.css">
+            </head>
+              <!-- End R2C3 ///////////////////////////////////-->
+
+              <!-- R3C1 ///////////////////////////////////-->
+              <!-- <div class="displayBoxr3c1"> -->
+                <!-- Hidden -->
+                <input type="radio" class="r3c1box1" name="boxr3c1" id="r3c1box1"/><br/>
+                <input type="radio" class="r3c1box2" name="boxr3c1" id="r3c1box2"/>
+                <input type="radio" class="r3c1box3" name="boxr3c1" id="r3c1box3"/>
+                <!--  visuals-->
+                <label class="r3c1Label1" for="r3c1box1"></label><br/>
+                <label class="r3c1Label2" for="r3c1box2"></label><br/>
+                <label class="r3c1Label3" for="r3c1box3" ></label><br/>
+                <div class="r3c1box1Div"><!-- Filled in with css content--></div>
+                <div class="response"><!-- Filled in with css content--></div>
+              <!-- </div> -->
+            <head>
+              <link rel="stylesheet" href="tictac/r3c1.css">
+            </head>
+              <!-- End R3C1 ///////////////////////////////////-->
+
+              <!-- R3C2 ///////////////////////////////////-->
+              <!-- <div class="displayBoxr3c2"> -->
+                <!-- Hidden -->
+                <input type="radio" class="r3c2box1" name="boxr3c2" id="r3c2box1"/><br/>
+                <input type="radio" class="r3c2box2" name="boxr3c2" id="r3c2box2"/>
+                <input type="radio" class="r3c2box3" name="boxr3c2" id="r3c2box3"/>
+                <!--  visuals-->
+                <label class="r3c2Label1" for="r3c2box1"></label><br/>
+                <label class="r3c2Label2" for="r3c2box2"></label><br/>
+                <label class="r3c2Label3" for="r3c2box3" ></label><br/>
+                <div class="r3c2box1Div"><!-- Filled in with css content--></div>
+                <div class="response"><!-- Filled in with css content--></div>
+              <!-- </div> -->
+            <head>
+              <link rel="stylesheet" href="tictac/r3c2.css">
+            </head>
+              <!-- End R3C2 ///////////////////////////////////-->
+
+              <!-- R3C3 ///////////////////////////////////-->
+              <!-- <div class="displayBoxr3c3"> -->
+                <!-- Hidden -->
+                <input type="radio" class="r3c3box1" name="boxr3c3" id="r3c3box1"/><br/>
+                <input type="radio" class="r3c3box2" name="boxr3c3" id="r3c3box2"/>
+                <input type="radio" class="r3c3box3" name="boxr3c3" id="r3c3box3"/>
+                <!--  visuals-->
+                <label class="r3c3Label1" for="r3c3box1"></label><br/>
+                <label class="r3c3Label2" for="r3c3box2"></label><br/>
+                <label class="r3c3Label3" for="r3c3box3" ></label><br/>
+                <div class="r3c3box1Div"><!-- Filled in with css content--></div>
+                <div class="response"><!-- Filled in with css content--></div>
+              <!-- </div> -->
+            <head>
+              <link rel="stylesheet" href="tictac/r3c3.css">
+            </head>
+              <!-- End R3C3 ///////////////////////////////////-->
+
+    <!--WINNING RED BARS  -->
+              <div class="winningLineRow winningLine1"></div>
+              <div class="winningLineRow winningLine2"></div>
+              <div class="winningLineRow winningLine3"></div>
+
+              <div class="winningLineColumn winningLine5"></div>
+              <div class="winningLineColumn winningLine6"></div>
+              <div class="winningLineColumn winningLine7"></div>
+
+              <div class="winningLineCross winningLine8"></div>
+              <div class="winningLineCross winningLine9"></div>
+
+              <head>
+                <link rel="stylesheet" href="tictac/winningConditionsRows.css">
+                <link rel="stylesheet" href="tictac/winningConditionsColumns.css">
+                <link rel="stylesheet" href="tictac/winningConditionsCross.css">
+              </head>
+              <div class="winningMessage">
+
+              </div>
+          </div>
+
+        </div>
+        <!-- WINNING CONDITIONS -->
+        <!-- ===================================================-->
+        <!-- 100% CSS, THE OTHER CODE ON THE PAGE IS FOR THE NAV BAR=================-->
+        <!-- ===================================================-->
+
+        <script>
+
+                          $('body').waypoint(function(direction) {
+                            if (direction == 'down') {
+                              $('.Mynavbar').addClass('sticky');
+                            } else {
+                              $('.Mynavbar').removeClass('sticky');
+                            }
+                          }, {
+                            offset: '-300'
+                          });
+
+                          // side bar script
+
+                          function toggleSlider() {
+                            // $('.Mynavbar').toggleClass('safarifix');
+                            $('body').toggleClass('slided');
+                            $('aside').toggleClass('slidedside');
+                            $('.overlay').toggleClass('overlayOn');
+
+                            $('.burger').toggleClass('activeBurger')
+                          };
+
+                          $('.mobileAdd').click(function(event) {
+                            /* Act on the event */
+                            event.preventDefault();
+                            console.log("mobileAdd clicked")
+                            toggleSlider();
+                          });
+
+                          $('.overlay').click(function(event) {
+                            /* Act on the event */
+                            toggleSlider();
+                          });
+
+                          $('.icon-cancel').click(function(event) {
+                            /* Act on the event */
+                            toggleSlider();
+                          });
+
+
+        </script>
+    </body>
+</html>

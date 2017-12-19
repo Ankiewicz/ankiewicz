@@ -1,0 +1,111 @@
+
+.winningLineColumn {
+  position: absolute;
+  visibility: hidden;
+  width: 280px;
+  transform: rotate(90deg);
+  border: 2px solid red;
+  z-index: 999;
+}
+
+
+/************************/
+/*Column 1 Win*****/
+/************************/
+.winningLine5 {
+  width: 280px;
+  top:138px;
+  left: -100px;
+}
+
+.r1c1box1:checked ~ .r2c1box1:checked ~ .r3c1box1:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Xs WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c1box2:checked ~ .r2c1box2:checked ~ .r3c1box2:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Os WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c1box1:checked ~ .r2c1box1:checked ~ .r3c1box1:checked ~ .winningLine5 {
+  visibility: visible;
+}
+.r1c1box2:checked ~ .r2c1box2:checked ~ .r3c1box2:checked ~ .winningLine5 {
+  visibility: visible;
+}
+/************************/
+/*Row 2 Win*****/
+/************************/
+.winningLine6 {
+  width: 280px;
+  top:135px;
+  left: -10px;
+}
+
+.r1c2box1:checked ~ .r2c2box1:checked ~ .r3c2box1:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Xs WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c2box2:checked ~ .r2c2box2:checked ~ .r3c2box2:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Os WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c2box1:checked ~ .r2c2box1:checked ~ .r3c2box1:checked ~ .winningLine6 {
+  visibility: visible;
+}
+.r1c2box2:checked ~ .r2c2box2:checked ~ .r3c2box2:checked ~ .winningLine6 {
+  visibility: visible;
+}
+
+/************************/
+/*Row 3 Win*****/
+/************************/
+.winningLine7 {
+  width: 280px;
+  top:135px;
+  left: 85px;
+}
+
+.r1c3box1:checked ~ .r2c3box1:checked ~ .r3c3box1:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Xs WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c3box2:checked ~ .r2c3box2:checked ~ .r3c3box2:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Os WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c3box1:checked ~ .r2c3box1:checked ~ .r3c3box1:checked ~ .winningLine7 {
+  visibility: visible;
+}
+.r1c3box2:checked ~ .r2c3box2:checked ~ .r3c3box2:checked ~ .winningLine7 {
+  visibility: visible;
+}

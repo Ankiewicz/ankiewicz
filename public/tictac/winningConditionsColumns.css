@@ -1,0 +1,125 @@
+.winningMessage {
+  position: absolute;
+  /*visibility: hidden;*/
+  right:0;
+  left: -20px;
+  bottom:-100px;
+  margin: auto;
+  border: 3px solid orange;
+  width: 300px;
+  height: 70px;
+  padding: 10px;
+  text-align: center;
+}
+.winningLineRow {
+  position: absolute;
+  visibility: hidden;
+  width: 280px;
+  border: 2px solid red;
+  z-index: 999;
+}
+
+
+/************************/
+/*Row 1 Win*****/
+/************************/
+.winningLine1 {
+  width: 280px;
+  top:45px;
+  right:0;
+  left: 0;
+}
+
+.r1c1box1:checked ~ .r1c2box1:checked ~ .r1c3box1:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Xs WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c1box2:checked ~ .r1c2box2:checked ~ .r1c3box2:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Os WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r1c1box1:checked ~ .r1c2box1:checked ~ .r1c3box1:checked ~ .winningLine1 {
+  visibility: visible;
+}
+.r1c1box2:checked ~ .r1c2box2:checked ~ .r1c3box2:checked ~ .winningLine1 {
+  visibility: visible;
+}
+/************************/
+/*Row 2 Win*****/
+/************************/
+.winningLine2 {
+  width: 280px;
+  top:135px;
+  right:0;
+  left: 0;
+}
+
+.r2c1box1:checked ~ .r2c2box1:checked ~ .r2c3box1:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Xs WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r2c1box2:checked ~ .r2c2box2:checked ~ .r2c3box2:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Os WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r2c1box1:checked ~ .r2c2box1:checked ~ .r2c3box1:checked ~ .winningLine2 {
+  visibility: visible;
+}
+.r2c1box2:checked ~ .r2c2box2:checked ~ .r2c3box2:checked ~ .winningLine2 {
+  visibility: visible;
+}
+
+/************************/
+/*Row 3 Win*****/
+/************************/
+.winningLine3 {
+  width: 280px;
+  top:220px;
+  right:0;
+  left: 0;
+}
+
+.r3c1box1:checked ~ .r3c2box1:checked ~ .r3c3box1:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Xs WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r3c1box2:checked ~ .r3c2box2:checked ~ .r3c3box2:checked ~ .winningMessage:before{
+  position: absolute;
+  content: "Os WIN";
+  visibility:visible;
+  font-size: 38px;
+  text-align: center;
+  width: 300px;
+  left:0;
+}
+.r3c1box1:checked ~ .r3c2box1:checked ~ .r3c3box1:checked ~ .winningLine3 {
+  visibility: visible;
+}
+.r3c1box2:checked ~ .r3c2box2:checked ~ .r3c3box2:checked ~ .winningLine3 {
+  visibility: visible;
+}

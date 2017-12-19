@@ -6,7 +6,7 @@ var d3 = require('d3')
 // var helper = require('sendgrid').mail;
 // var mailer = require('sendgrid-mailer').config(process.env.SENDGRID_API_KEY);
 var mailer = require('sendgrid-mailer').config('process.env.SENDGRID_API_KEY')
-
+var sendEmail = require('./emailService');
 
 
 
@@ -31,24 +31,14 @@ router.get('/scoreboard', function(req, res, next) {
   res.render('./scoreboard')
 })
 
-router.post('/sendEmail', function(req, res, next){
-
-  console.log(req.body);
-    // res.json(req.body);
-  // Create email data
-  const email = {
-    to: 'ankiewicz84@gmail.com,' + req.body.email,
-    from: 'ankiewicz84@gmail.com',
-    subject: 'Hello world',
-    text: 'Hello plain world!',
-    html: '<p>Hello HTML world!</p>' + req.body.text,
-  };
-
-  // Send away
-  mailer.send(email); //Returns promise
-  res.json({success: 'success'})
+router.post('/sendEmail', (req, res, next) => {
+  sendEmail({
+    email: 'ankiewicz84@gmail.com,' + req.body.email,
+    name: req.body.name,
+    message: req.body.text,
+    phone: req.body.phone
+  })
+  res.send('email sent')
 })
-
-
 
 module.exports = router

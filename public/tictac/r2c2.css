@@ -1,0 +1,85 @@
+
+.r2c2box1Div{
+  position: absolute;
+  top: 70px;
+  left: 105px;
+  z-index: 9;
+  width: 32.33%;
+  float: left;
+}
+
+.r2c2Label1,
+.r2c2Label2,
+.r2c2Label3{
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  z-index: 99;
+  width: 90px;
+  height: 90px;
+  border-bottom: 1px solid purple;
+}
+.r2c2Label1,
+.r2c2Label2,
+.r2c2Label3{
+  visibility: hidden;
+}
+/* Button display logic*/
+.r2c2box1 ~ .r2c2box2 ~ .r2c2Label1 {
+  visibility: visible;
+}
+
+.r2c2box1:checked ~ .r2c2Label1 {
+  visibility: hidden;
+}
+.r2c2box1:checked ~ .r2c2Label2 {
+  visibility: visible;
+}
+
+.r2c2box2:checked ~ .r2c2Label1,
+.r2c2box2:checked ~ .r2c2Label2  {
+  visibility: hidden;
+}
+.r2c2box2:checked ~ .r2c2Label3 {
+  visibility: visible;
+}
+
+.r2c2box1:checked ~ .r2c2box1Div:before {
+  position: absolute;
+  content: 'X';
+  /*background: red;*/
+  width:70px;
+  height: 70px;
+  font-size: 90px;
+}
+
+.r2c2box2:checked ~ .r2c2box1Div:before {
+  position: absolute;
+  content: 'O';
+  /*background: red;*/
+  width:70px;
+  height: 70px;
+  font-size: 90px;
+}
+/*************************/
+/*MESSAGE QUEUE LOGIC */
+/************************/
+/*.r2c2box1:checked ~ .response:before {
+  content: ' r2c2 Selected as box1 selected X ';
+  background: red;
+  width:10px;
+  height: 10px;
+}
+
+.r2c2box2:checked ~ .response:before {
+  content: ' r2c2 Selected as box2 selected O ';
+  background: red;
+  width:10px;
+  height: 10px;
+}
+.r2c2box3:checked ~ .response:before {
+  content: ' r2c2 Selected as box3 selected back to empty square';
+  background: red;
+  width:10px;
+  height: 10px;
+}*/
