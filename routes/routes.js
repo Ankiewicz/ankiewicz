@@ -38,7 +38,7 @@ router.post('/sendEmail', (req, res, next) => {
     message: req.body.text,
     phone: req.body.phone
   })
-  res.send('Currently Email system is down, I will have this back in ASAP.')
+  res.send('Currently Email system is down, I will have this back in ASAP. Please message me on <a href="https://www.linkedin.com/in/ankiewicz/">https://www.linkedin.com/in/ankiewicz/</a>')
 })
 
 module.exports = router
